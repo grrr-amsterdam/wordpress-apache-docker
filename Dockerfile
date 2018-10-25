@@ -15,7 +15,7 @@ RUN sed -i '/Global configuration/a \
 ServerName localhost \
 ' /etc/apache2/apache2.conf
 
-COPY vhosts/wordpress_scaffold.conf /etc/apache2/sites-enabled/wordpress_scaffold.conf
+COPY vhosts/wordpress_scaffold.conf /etc/apache2/sites-enabled/
 
 EXPOSE 80 443
 RUN rm -f /run/apache2/apache2.pid
