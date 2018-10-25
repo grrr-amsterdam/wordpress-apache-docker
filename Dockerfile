@@ -5,7 +5,7 @@ ENV PATH $HTTPD_PREFIX/bin:$PATH
 RUN mkdir -p "$HTTPD_PREFIX" \
     && chown www-data:www-data "$HTTPD_PREFIX"
 WORKDIR $HTTPD_PREFIX
-./vho
+
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     apache2 curl \
