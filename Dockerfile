@@ -14,6 +14,7 @@ RUN a2enmod proxy_fcgi ssl rewrite proxy proxy_balancer proxy_http proxy_ajp
 RUN sed -i '/Global configuration/a \
 ServerName localhost \
 ' /etc/apache2/apache2.conf
+RUN rm /etc/apache2/sites-enabled/000-default.conf
 
 COPY vhosts/wordpress_scaffold.conf /etc/apache2/sites-enabled/
 
